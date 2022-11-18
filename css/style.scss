@@ -1,0 +1,58 @@
+@import "null.scss";
+
+.wrapper{
+    @include flexbox();
+    justify-content: center;
+}
+
+table{
+    @include flexbox();
+    justify-content: center;
+    text-align: center;
+    color: white;
+    border-collapse:collapse;
+}
+
+th{
+    background-color: #053eff;
+    font-size: 18px;
+    padding: 20px;
+    border: 1px solid 3967ff;
+}
+
+td{
+    color: black;
+    font-size: 20px;
+    opacity: 80%;
+    padding: 15px;
+    border: 1px solid #3967ff;
+}
+
+tr{
+    border: 1px solid 3967ff;
+}
+
+button{
+    padding: 15px 30px;
+    font-size: 24px;
+}
+.table__buttons{
+    margin: 24px 0px 0px 0px;
+}
+.table__total{
+    @include flexbox();
+    justify-content: space-between;
+    font-size: 18px;
+    margin-top: 24px;
+}
+
+.total-salary__input{
+    width: 40px;
+    font-size: 18px;
+    border: 1px solid #3967ff;
+    margin-left: 5px;
+}
+
+.total-gross{
+    font-size: 18px;
+}

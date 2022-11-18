@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Time Counter</title>
+</head>
+<body>
+ <div class="wrapper">
+    <div class="table__info" id="table__info">
+        <table id="table">
+            <tbody id="tbody">
+                <tr>
+                    <th>Start of Shift</th>
+                    <th>Start of Lunch</th>
+                    <th>Finish of Lunch</th>
+                    <th>Finish of Shift</th>
+                    <th>Total Hours</th>
+                </tr>
+            </tbody>
+        </table>
+        <div class="table__buttons">
+            <button id="add">add</button>
+        </div>
+        <div class="table__total">
+            <div class="total-salary">Your salary per hour: <input class="total-salary__input" type="number" id="salary"></div>
+            <div class="total-hours">Total hours per period: <span id="num">0:00</span></div>
+        </div>
+        <button id="solve">Solve</button>
+        <div class="total-gross">Your Groos will be :<span id="gross"></span></div>
+        <div class="total-gross">Without tax it will be :<span id="withoutTax"></span></div>
+ </div> 
+ <script src="js/style.js"></script>
+</body>
+</html>
