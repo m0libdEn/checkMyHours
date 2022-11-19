@@ -11,6 +11,8 @@ let arrOfLines = []
 let totalHours = 0
 
 add.addEventListener('click', function() {
+    totalHours+=arrOfLines[arrOfLines.length-1].solveTime()
+    num.innerHTML = fromMinToHours(totalHours)
     arrOfLines.push(new Line)
 })
 
@@ -68,21 +70,16 @@ class Line{
 
 
 solve.addEventListener('click',function() {
-    arrOfLines.forEach(element => {
-    totalHours+=element.solveTime()
-   });
-   console.log(totalHours);
-   let earnedmoney = 0
-   if (totalHours > 4800) {
-    let overtime = totalHours - 4800
-    earnedmoney = 80*salary.value + ((Math.trunc(overtime/60))+(overtime%60)/60)*salary*1.5
-   }else{
-    console.log(salary.value);
-    earnedmoney = ((Math.trunc(totalHours/60))+(totalHours%60)/60)*salary.value
-   }
-   num.innerHTML = fromMinToHours(totalHours)
-   gross.innerHTML = `${earnedmoney.toFixed(2)} $`
-   tax.innerHTML = `${(earnedmoney.toFixed(2)*0.85).toFixed(2)} $`
+    let earnedmoney = 0
+    if (totalHours > 4800) {
+        let overtime = totalHours - 4800
+        earnedmoney = 80*salary.value + ((Math.trunc(overtime/60))+(overtime%60)/60)*salary*1.5
+    }else{
+        console.log(salary.value);
+        earnedmoney = ((Math.trunc(totalHours/60))+(totalHours%60)/60)*salary.value
+    }
+    gross.innerHTML = `${earnedmoney.toFixed(2)} $`
+    tax.innerHTML = `${(earnedmoney.toFixed(2)*0.85).toFixed(2)} $`
 
 })      
 
