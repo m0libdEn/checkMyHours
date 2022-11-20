@@ -17,7 +17,7 @@ th{
     background-color: #053eff;
     font-size: 18px;
     padding: 20px;
-    border: 1px solid 3967ff;
+    border: 1px solid #3967ff;
 }
 
 td{
@@ -56,4 +56,34 @@ button{
 .total-gross{
     font-size: 18px;
     padding: 25px 0px 0px 0px;
+}
+
+@media (max-width:600px) {
+    th,td{
+        font-size: 12px;
+        padding: 8px;
+    }
+    input{
+        font-size: 12px;
+    }
+    button{
+        padding: 8px 18px;
+        font-size: 18px;
+    }
+}
+
+@media (max-width:$md4) {
+    th,td{
+        font-size: 8px;
+        padding: 5px;
+    }
+    input{
+        font-size: 8px;
+    }
+    .table__total{
+        flex-direction: column;
+        *{
+            margin-bottom: 12px;
+        }
+    }
 }
