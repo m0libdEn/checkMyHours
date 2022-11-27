@@ -207,4 +207,8 @@ button {
   .table__total * {
     margin-bottom: 12px;
   }
+  button {
+    padding: 6px 12px;
+    font-size: 14px;
+  }
 }/*# sourceMappingURL=style.css.map */

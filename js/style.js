@@ -73,9 +73,8 @@ solve.addEventListener('click',function() {
     let earnedmoney = 0
     if (totalHours > 4800) {
         let overtime = totalHours - 4800
-        earnedmoney = 80*salary.value + ((Math.trunc(overtime/60))+(overtime%60)/60)*salary*1.5
+        earnedmoney = 80*salary.value + ((Math.trunc(overtime/60))+(overtime%60)/60)*salary.value*1.5
     }else{
-        console.log(salary.value);
         earnedmoney = ((Math.trunc(totalHours/60))+(totalHours%60)/60)*salary.value
     }
     gross.innerHTML = `${earnedmoney.toFixed(2)} $`
